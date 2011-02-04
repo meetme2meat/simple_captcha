@@ -1,0 +1,36 @@
+= simple_captcha
+
+Description goes here.
+* Simple Captcha is just a simple implementation of mathematical captcha 
+* To use Simple Captcha 
+* Install the gem using 
+  sudo gem install simple_captcha
+ 
+* In the Appropriate Model (For Which Captcha need to be put in) paste the given code below
+
+  include Captcha
+  validate :validate_captcha
+  
+* In the View add the code (Where captcha id to be implemented [replace 'form_name' with the name of your form])
+ (For Rails >= 3.0)
+   <%= raw captcha_form 'form_name' %>
+ (For Rails < 3.0)
+    <%= captcha_form 'form_name' %>
+
+* Simple Captcha is in it Early Stage for Advance Captcha will be Added in future
+
+== Contributing to simple_captcha
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2011 Viren Negi. See LICENSE.txt for
+further details.
+
